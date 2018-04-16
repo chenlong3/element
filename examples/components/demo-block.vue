@@ -58,6 +58,7 @@
 
     .source {
       padding: 24px;
+      background: #f7f7f7;
     }
 
     .meta {

@@ -40,9 +40,9 @@ $--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
 $--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
 $--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
 
-$--color-text-primary: #303133 !default;
+$--color-text-primary: #333 !default;
 $--color-text-regular: #606266 !default;
-$--color-text-secondary: #909399 !default;
+$--color-text-secondary: #a5adb8 !default;            // #a5adb8 $grey
 $--color-text-placeholder: #c0c4cc !default;
 
 /* Link
@@ -476,12 +476,14 @@ $--dialog-padding-primary: 20px !default;
 /* Table
 -------------------------- */
 $--table-border-color: $--border-color-lighter !default;
+$--table-box-shadow: inset 0 -1px 0 0 #f0f4fa !default;
 $--table-border: 1px solid $--table-border-color !default;
-$--table-text-color: $--color-text-regular !default;
+$--table-text-color: $--color-text-primary !default;                      // 2018.4.16
 $--table-header-color: $--color-text-secondary !default;
-$--table-row-hover-background: $--background-color-base !default;
+$--table-row-hover-background: #f5f8ff !default;
 $--table-current-row-background: $--color-primary-light-9 !default;
-$--table-header-background: $--color-white !default;
+$--table-body-background: $--color-white !default;
+$--table-header-background: transparent !default;
 $--table-footer-background: $--color-text-placeholder !default;
 $--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, .12) !default;
 

@@ -111,7 +111,7 @@ export default {
                   })
                 }
               </tr>,
-              this.store.isRowExpanded(row)
+              row.isExpanded
                 ? (<tr>
                   <td colspan={ this.columns.length } class="el-table__expanded-cell">
                     { this.table.renderExpanded ? this.table.renderExpanded(h, { row, $index, store: this.store }) : ''}
@@ -194,7 +194,7 @@ export default {
     },
 
     columns() {
-      return this.store.states.columns;
+      return this.store.states.columns.filter((column) => column.type !== 'expand');
     }
   },
 

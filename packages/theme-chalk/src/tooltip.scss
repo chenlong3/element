@@ -38,7 +38,7 @@
 
     &[x-placement^="top"] .popper__arrow {
       bottom: -$--tooltip-arrow-size;
-      border-top-color: $--tooltip-border-color;
+      // border-top-color: $--tooltip-border-color;
       border-bottom-width: 0;
 
       &::after {
@@ -56,7 +56,7 @@
     &[x-placement^="bottom"] .popper__arrow {
       top: -$--tooltip-arrow-size;
       border-top-width: 0;
-      border-bottom-color: $--tooltip-border-color;
+      // border-bottom-color: $--tooltip-border-color;
 
       &::after {
         top: 1px;
@@ -72,7 +72,7 @@
 
     &[x-placement^="right"] .popper__arrow {
       left: -$--tooltip-arrow-size;
-      border-right-color: $--tooltip-border-color;
+      // border-right-color: $--tooltip-border-color;
       border-left-width: 0;
 
       &::after {
@@ -90,7 +90,7 @@
     &[x-placement^="left"] .popper__arrow {
       right: -$--tooltip-arrow-size;
       border-right-width: 0;
-      border-left-color: $--tooltip-border-color;
+      // border-left-color: $--tooltip-border-color;
 
       &::after {
         right: 1px;
@@ -108,28 +108,29 @@
 
     @include when(light) {
       background: $--tooltip-color;
-      border: 1px solid $--tooltip-fill;
+     //  border: 1px solid $--tooltip-fill;
+      box-shadow: 0 8px 24px 1px rgba(54, 59, 71, 0.3);
 
       &[x-placement^="top"] .popper__arrow {
-        border-top-color: $--tooltip-fill;
+        // border-top-color: $--tooltip-fill;
         &::after {
           border-top-color: $--tooltip-color;
         }
       }
       &[x-placement^="bottom"] .popper__arrow {
-        border-bottom-color: $--tooltip-fill;
+        // border-bottom-color: $--tooltip-fill;
         &::after {
           border-bottom-color: $--tooltip-color;
         }
       }
       &[x-placement^="left"] .popper__arrow {
-        border-left-color: $--tooltip-fill;
+        // border-left-color: $--tooltip-fill;
         &::after {
           border-left-color: $--tooltip-color;
         }
       }
       &[x-placement^="right"] .popper__arrow {
-        border-right-color: $--tooltip-fill;
+        // border-right-color: $--tooltip-fill;
         &::after {
           border-right-color: $--tooltip-color;
         }

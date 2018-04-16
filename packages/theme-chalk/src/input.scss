@@ -57,7 +57,7 @@
   width: 100%;
   @include scroll-bar;
 
-  & .el-input__clear {
+  &.el-input__clear {
     color: $--input-icon-color;
     font-size: $--input-font-size;
     line-height: 16px;
@@ -82,7 +82,7 @@
     height: $--input-height;
     line-height: $--input-height;
     outline: none;
-    padding: 0 15px;
+    padding: 0 16px;
     transition: $--border-transition-base;
     width: 100%;
 
@@ -91,12 +91,13 @@
     }
 
     &:hover {
-      border-color: $--input-hover-border;
+      border-color: $--input-focus-border;
     }
 
     &:focus {
       outline: none;
       border-color: $--input-focus-border;
+      box-shadow: 0 0 0 2px rgba(101, 154, 234, 0.2);
     }
   }
 

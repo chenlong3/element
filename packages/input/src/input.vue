@@ -24,7 +24,7 @@
         v-if="type !== 'textarea'"
         class="el-input__inner"
         v-bind="$attrs"
-        :type="type"
+        :type="_inputType"
         :disabled="inputDisabled"
         :autocomplete="autoComplete"
         :value="currentValue"
@@ -102,6 +102,8 @@
   import merge from 'element-ui/src/utils/merge';
   import { isKorean } from 'element-ui/src/utils/shared';
 
+  import {keyDownEvent, dealVal} from './number_input';
+
   export default {
     name: 'ElInput',
 
@@ -142,6 +144,7 @@
         type: String,
         default: 'text'
       },
+      decimals: [String, Number],
       autosize: {
         type: [Boolean, Object],
         default: false
@@ -165,6 +168,12 @@
     },
 
     computed: {
+      isNum() {
+        return (this.type === 'number');
+      },
+      _inputType() {
+        return (this.isNum ? 'text' : this.type);
+      },
       _elFormItemSize() {
         return (this.elFormItem || {}).elFormItemSize;
       },
@@ -263,7 +272,8 @@
       },
       handleInput(event) {
         if (this.isOnComposition) return;
-        const value = event.target.value;
+        // const value = event.target.value;
+        const value = this.isNum ? dealVal(event.target, this.decimals) : event.target.value;
         this.$emit('input', value);
         this.setCurrentValue(value);
       },
@@ -306,7 +316,12 @@
     },
 
     mounted() {
+      if (this.isNum) {
+        const input = this.$el.querySelector('.el-input__inner');
+        input && input.addEventListener('keydown', keyDownEvent);
+      }
       this.resizeTextarea();
+
       if (this.isGroup) {
         this.prefixOffset = this.calcIconOffset('pre');
         this.suffixOffset = this.calcIconOffset('suf');

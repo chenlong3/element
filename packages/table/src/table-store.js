@@ -226,6 +226,7 @@ TableStore.prototype.mutations = {
   },
 
   insertColumn(states, column, index, parent) {
+    if (column.type === 'expand') return;
     let array = states._columns;
     if (parent) {
       array = parent.children;

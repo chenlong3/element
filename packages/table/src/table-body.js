@@ -194,7 +194,7 @@ export default {
     },
 
     columns() {
-      return this.store.states.columns.filter((column) => column.type !== 'expand');
+      return this.store.states.columns;
     }
   },
 

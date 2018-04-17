@@ -29,13 +29,18 @@
 
   &:hover,
   &:focus {
+    border-color: $--color-primary;
+  }
+  &:hover{
     color: $--color-primary;
-    border-color: $--color-primary-light-7;
-    background-color: $--color-primary-light-9;
+  }
+  &:focus{
+    color: $--color-white;
+    background-color: $--color-primary;
   }
 
   &:active {
-    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    color: $--color-white;
     border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
     outline: none;
   }

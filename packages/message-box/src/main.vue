@@ -54,9 +54,8 @@
             :class="[ cancelButtonClasses ]"
             v-if="showCancelButton"
             :round="roundButton"
-            size="small"
             @click.native="handleAction('cancel')"
-            @keydown.enter="handleAction('cancel')">
+            @keydown.enter="handleAction('cancel')" plain>
             {{ cancelButtonText || t('el.messagebox.cancel') }}
           </el-button>
           <el-button
@@ -65,7 +64,6 @@
             :class="[ confirmButtonClasses ]"
             v-show="showConfirmButton"
             :round="roundButton"
-            size="small"
             @click.native="handleAction('confirm')"
             @keydown.enter="handleAction('confirm')">
             {{ confirmButtonText || t('el.messagebox.confirm') }}

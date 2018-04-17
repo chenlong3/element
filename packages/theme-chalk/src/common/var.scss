@@ -41,7 +41,7 @@ $--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
 $--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
 
 $--color-text-primary: #333 !default;
-$--color-text-regular: #606266 !default;
+$--color-text-regular: #666 !default;
 $--color-text-secondary: #a5adb8 !default;            // #a5adb8 $grey
 $--color-text-placeholder: #ccc !default;
 
@@ -261,11 +261,11 @@ $--alert-icon-large-size: 28px !default;
 -------------------------- */
 $--msgbox-width: 420px !default;
 $--msgbox-border-radius: 4px !default;
-$--msgbox-font-size: $--font-size-large !default;
+$--msgbox-font-size: 16px !default;
 $--msgbox-content-font-size: $--font-size-base !default;
 $--msgbox-content-color: $--color-text-regular !default;
 $--msgbox-error-font-size: 12px !default;
-$--msgbox-padding-primary: 15px !default;
+$--msgbox-padding-primary: 16px !default;
 
 $--msgbox-success-color: $--color-success !default;
 $--msgbox-info-color: $--color-info !default;
@@ -393,11 +393,11 @@ $--tab-vertical-header-count-fill: $--color-text-secondary !default;
 
 /* Button
 -------------------------- */
-$--button-font-size: 14px !default;
+$--button-font-size: 16px !default;
 $--button-font-weight: $--font-weight-primary !default;
 $--button-border-radius: $--border-radius-base !default;
-$--button-padding-vertical: 12px !default;
-$--button-padding-horizontal: 20px !default;
+$--button-padding-vertical: 11px !default;
+$--button-padding-horizontal: 24px !default;
 
 $--button-medium-font-size: 14px !default;
 $--button-medium-border-radius: $--border-radius-base !default;

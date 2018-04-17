@@ -22,25 +22,20 @@
   font-weight: $--button-font-weight;
   @include utils-user-select(none);
   & + .el-button {
-    margin-left: 10px;
+    margin-left: 8px;
   }
 
   @include button-size($--button-padding-vertical, $--button-padding-horizontal, $--button-font-size, $--button-border-radius);
 
   &:hover,
   &:focus {
-    border-color: $--color-primary;
-  }
-  &:hover{
     color: $--color-primary;
-  }
-  &:focus{
-    color: $--color-white;
-    background-color: $--color-primary;
+    border-color: $--color-primary-light-7;
+    background-color: $--color-primary-light-9;
   }
 
   &:active {
-    color: $--color-white;
+    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
     border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
     outline: none;
   }

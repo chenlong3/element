@@ -7,7 +7,7 @@
 @include b(message-box) {
   display: inline-block;
   width: $--msgbox-width;
-  padding-bottom: 10px;
+  padding-bottom: 24px;
   vertical-align: middle;
   background-color: $--color-white;
   border-radius: $--msgbox-border-radius;
@@ -74,7 +74,7 @@
 
   @include e(content) {
     position: relative;
-    padding: 10px $--msgbox-padding-primary;
+    padding: 16px 32px;
     color: $--msgbox-content-color;
     font-size: $--msgbox-content-font-size;
   }
@@ -140,11 +140,15 @@
   }
 
   @include e(btns) {
-    padding: 5px 15px 0;
-    text-align: right;
+    padding: 8px 32px 0;
+    text-align: center;
 
-    & button:nth-child(2) {
-      margin-left: 10px;
+    & button {
+      $pd: 8px;
+      width: calc(50% - #{$pd});
+      &:nth-child(2) {
+        margin-left: $pd * 2;
+      }
     }
   }
 

@@ -71,7 +71,9 @@
       border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
       outline: none;
     }
-
+    &.active{
+      color: $--color-white;
+    }
   }
 
   @include when(active) {

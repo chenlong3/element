@@ -29,17 +29,22 @@
 
   &:hover,
   &:focus {
-    color: $--color-primary;
-    border-color: $--color-primary-light-7;
-    background-color: $--color-primary-light-9;
+    background: $--color-white;
+    border-color: $--color-primary-hover;
+    color: $--color-primary-hover;
   }
 
   &:active {
-    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    background: $--color-white;
     border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
     outline: none;
   }
 
+  &.active{
+    border-color: $--color-primary;
+    background-color: $--color-primary;
+  }
   &::-moz-focus-inner {
     border: 0;
   }
@@ -51,19 +56,21 @@
   }
 
   @include when(plain) {
+    color: $--color-primary;
+    border-color: $--color-primary;
     &:hover,
     &:focus {
-      background: $--color-white;
-      border-color: $--color-primary;
-      color: $--color-primary;
+      color: $--color-primary-hover;
+      border-color: $--color-primary-hover;
+      // background-color: $--color-primary-light-9;
     }
 
     &:active {
-      background: $--color-white;
-      border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
       color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+      border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
       outline: none;
     }
+
   }
 
   @include when(active) {

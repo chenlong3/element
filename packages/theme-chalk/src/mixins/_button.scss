@@ -37,8 +37,8 @@
 
   &:hover,
   &:focus {
-    background: mix($--color-white, $background-color, $--button-hover-tint-percent);
-    border-color: mix($--color-white, $border-color, $--button-hover-tint-percent);
+    background: $--color-primary-hover;
+    border-color: $--color-primary-hover;
     color: $color;
   }
   
@@ -60,9 +60,9 @@
     &:hover,
     &:focus,
     &:active {
-      color: $--color-white;
-      background-color: mix($background-color, $--color-white);
-      border-color: mix($border-color, $--color-white);
+      color: $--color-text-placeholder;
+      background-color: $--border-color-lighter;
+      border-color:  $--border-color-lighter;
     }
   }
 

@@ -44,6 +44,7 @@
   &.active{
     border-color: $--color-primary;
     background-color: $--color-primary;
+    color: $--color-white;
   }
   &::-moz-focus-inner {
     border: 0;

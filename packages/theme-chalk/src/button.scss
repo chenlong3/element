@@ -58,7 +58,6 @@
 
   @include when(plain) {
     color: $--color-primary;
-    border-color: $--color-primary;
     &:hover,
     &:focus {
       color: $--color-primary-hover;

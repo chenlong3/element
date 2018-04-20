@@ -55,7 +55,7 @@
             v-if="showCancelButton"
             :round="roundButton"
             @click.native="handleAction('cancel')"
-            @keydown.enter="handleAction('cancel')" plain>
+            @keydown.enter="handleAction('cancel')">
             {{ cancelButtonText || t('el.messagebox.cancel') }}
           </el-button>
           <el-button

@@ -64,16 +64,15 @@
   }
 
   @include e(body) {
-    padding: 30px 20px;
+    padding: 16px 32px;
     color: $--color-text-regular;
     line-height: $--dialog-line-height;
     font-size: $--dialog-font-size;
   }
 
   @include e(footer) {
-    padding: $--dialog-padding-primary;
-    padding-top: 10px;
-    text-align: right;
+    padding: 8px 32px 24px;
+    text-align: center;
     box-sizing: border-box;
   }
 

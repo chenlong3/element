@@ -24,6 +24,7 @@
         v-if="type !== 'textarea'"
         class="el-input__inner"
         v-bind="$attrs"
+        @keyup.enter="$emit('keyup.enter')"
         :type="_inputType"
         :disabled="inputDisabled"
         :autocomplete="autoComplete"

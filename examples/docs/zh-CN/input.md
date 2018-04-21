@@ -227,7 +227,7 @@ export default {
 
 ### 可清空
 
-:::demo 使用`clearable`属性即可得到一个可清空的输入框
+:::demo 使用`clearable`属性即可得到一个可清空的输入框,当有slot suffix时不显示
 
 ```html
 <el-input
@@ -794,11 +794,17 @@ export default {
 ```
 :::
 
+:::tip
+ 'type' 为 number 时限制输入，只允许数字与'.',设置decimals限制小数位置
+:::
+
+
 ### Input Attributes
 
 | 参数          | 说明            | 类型            | 可选值                 | 默认值   |
 |-------------  |---------------- |---------------- |---------------------- |-------- |
-| type         | 类型   | string  | text / textarea | text |
+| type         | 类型   | string  | text / number / textarea | text |
+| decimals      | 小数位数 | String / number | — | — |
 | value         | 绑定值           | string / number  | — | — |
 | maxlength     | 原生属性，最大输入长度      | number          |  —  | — |
 | minlength     | 原生属性，最小输入长度      | number          | — | — |

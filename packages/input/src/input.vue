@@ -162,7 +162,7 @@
       label: String,
       clearable: {
         type: Boolean,
-        default: false
+        default: true
       },
       tabindex: String
     },
@@ -203,7 +203,7 @@
         return this.$slots.prepend || this.$slots.append;
       },
       showClear() {
-        return this.clearable && !this.disabled && this.currentValue !== '' && (this.focused || this.hovering);
+        return this.clearable && !this.$slots.suffix && !this.disabled && this.currentValue !== '' && (this.focused || this.hovering);
       }
     },
 
